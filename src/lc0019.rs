@@ -2,7 +2,8 @@
 19. Remove Nth Node From End of List
 Medium
 
-Given the head of a linked list, remove the nth node from the end of the list and return its head.
+Given the head of a linked list, 
+ remove the nth node from the end of the list and return its head.
 
 Example 1:
   Input: head = [1,2,3,4,5], n = 2
@@ -25,7 +26,8 @@ Constraints:
 use crate::data::ListNode;
 use crate::Solution;
 impl Solution {
-  pub fn remove_nth_from_end(head: Option<Box<ListNode>>, n: i32) -> Option<Box<ListNode>> {
+  pub fn remove_nth_from_end
+  (head: Option<Box<ListNode>>, n: i32) -> Option<Box<ListNode>> {
     let mut dummy = Box::new(ListNode { val: 0, next: head });
     unsafe {
       let mut slow = &mut dummy as *mut Box<ListNode>;

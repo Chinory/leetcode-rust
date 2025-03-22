@@ -3,7 +3,8 @@
 Easy
 
 You are given the heads of two sorted linked lists list1 and list2.
-Merge the two lists in a one sorted list. The list should be made by splicing together the nodes of the first two lists.
+Merge the two lists in a one sorted list.
+ The list should be made by splicing together the nodes of the first two lists.
 Return the head of the merged linked list.
 
 Example 1:
@@ -26,7 +27,9 @@ Constraints:
 use crate::data::ListNode;
 use crate::Solution;
 impl Solution {
-  pub fn merge_two_lists(mut list1: Option<Box<ListNode>>, mut list2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+  pub fn merge_two_lists(
+    mut list1: Option<Box<ListNode>>, 
+    mut list2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
     let mut dummy = ListNode::new(-1);
     let mut dst = &mut dummy;
     while let (Some(l1), Some(l2)) = (list1.as_ref(), list2.as_ref()) {
